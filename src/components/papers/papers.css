@@ -1,0 +1,19 @@
+.papers-container {
+    padding: 1rem;
+}
+
+.paper-container + .paper-container {
+    margin-top: 2rem;
+}
+
+.paper-container-right {
+    margin-left: auto;
+}
+
+.paper-right-border-circle {
+    border-radius: 0 2em 2em 0;
+}
+
+.paper-left-border-circle {
+    border-radius: 2em 0 0 2em;
+}

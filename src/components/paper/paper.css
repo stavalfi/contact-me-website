@@ -1,0 +1,29 @@
+.paper-container {
+    display: flex;
+    border-style: solid;
+    border-width: 1px;
+    width: 75%;
+}
+
+.paper {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.paper-title {
+    font-size: 1.5rem;
+}
+
+.paper-summary {
+    font-size: 1.2rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.paper-container:hover {
+    border-color: #a5b1c2;
+}

@@ -1,0 +1,48 @@
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack-serve",
+    "build": "cross-env NODE_ENV=deployment webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.0",
+    "cssnano": "^4.1.0",
+    "file-loader": "^2.0.0",
+    "git-revision-webpack-plugin": "^3.0.3",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.8.1",
+    "mini-css-extract-plugin": "^0.4.2",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss-safe-parser": "^4.0.1",
+    "speed-measure-webpack-plugin": "^1.2.2",
+    "style-loader": "^0.22.1",
+    "url-loader": "^1.1.1",
+    "webpack": "^4.16.5",
+    "webpack-bundle-analyzer": "^2.13.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-jarvis": "^0.3.2",
+    "webpack-serve": "^2.0.2"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "@kennethormandy/react-fittext": "^0.3.1",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-textfit": "^1.1.0"
+  }
+}

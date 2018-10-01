@@ -1,0 +1,25 @@
+.creation-details {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+}
+
+.creation-title {
+    margin: 0 3rem 1rem 3rem;
+}
+
+.creation-details > p {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.creation-github-link {
+    margin: 0 auto;
+}
+
+.creation-github-link > a > img {
+    margin-top: 2vh;
+    width: 6vmin;
+    height: 6vmin;
+}
