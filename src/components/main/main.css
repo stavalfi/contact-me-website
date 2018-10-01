@@ -1,29 +1,49 @@
-.page-container{
+.page-container {
     display: flex;
     justify-content: center;
     background-color: #f7f9fb;
+    min-height: 100vh;
 }
-.page-content{
+
+.page-content {
     width: 60vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
-.website-title{
+
+.website-title {
+    margin-top: 2rem;
     font-size: 4em;
     padding-top: 0.3em;
     padding-bottom: 0.3em;
     text-align: center;
     text-transform: uppercase;
 }
-.menu{
+
+.menu {
     padding-top: 0.3em;
     padding-bottom: 0.3em;
     display: flex;
     justify-content: space-evenly;
 }
+
 .menu > span {
     text-transform: uppercase;
 }
-.content{
+
+.menu > span:hover {
+    color: #a5b1c2;
+}
+
+.content {
+    height: 100%;
+}
+
+.website-header {
+    font-size: 15px;
+    font-style: oblique;
+    font-family: "freight-sans-pro", serif;
+    color: #454545;
+    margin: 2rem auto;
 }

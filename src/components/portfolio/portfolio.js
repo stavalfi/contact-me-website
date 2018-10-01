@@ -1,6 +1,6 @@
 import "./portfolio.css";
 import Creation from "../creation/creation";
-import {creations} from "../../utls/creations";
+import {creations} from "../../data/creations";
 
 const React = require("react");
 

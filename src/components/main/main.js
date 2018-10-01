@@ -1,6 +1,7 @@
 import "./main.css";
 import Portfolio from "../portfolio/portfolio";
 import Papers from "../papers/papers";
+import ContactMe from "../contact-me/contact-me";
 
 const React = require("react");
 
@@ -13,9 +14,6 @@ export default class Main extends React.Component {
                     STAV ALFI
                 </div>
                 <div className="menu">
-                    <span>
-                        Main
-                    </span>
                     <span>
                         Portfolio
                     </span>
@@ -30,8 +28,11 @@ export default class Main extends React.Component {
                     </span>
                 </div>
                 <div className="content">
+                    <ContactMe/>
                     <Portfolio/>
-                    <Papers/>
+                </div>
+                <div className="website-header">
+                    all rights reserved | Stav Alfi 2018 © | stavalfi@gmail.com
                 </div>
             </div>
         </div>;

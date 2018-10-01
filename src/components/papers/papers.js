@@ -1,6 +1,6 @@
 import "./papers.css";
 import {mapIf, not, indexEven} from "../../utls/conditionalOperators";
-import {papers} from "../../utls/papers";
+import {papers} from "../../data/papers";
 import Paper from "../paper/paper";
 
 const React = require("react");
