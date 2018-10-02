@@ -1,8 +1,8 @@
 import "./creation.css";
 import HorizontalTags from "../horizontal-tags/horizontal-tags";
 import {Textfit} from 'react-textfit';
-
-const React = require("react");
+import gitHubIcon from '../../assets/icons/github-icon.png'
+import React from "react";
 
 export default class Creation extends React.Component {
     constructor(props) {
@@ -23,11 +23,10 @@ export default class Creation extends React.Component {
                 {this.props.creation.summary}
             </p>
             <HorizontalTags tagsAlign="center" tags={this.props.creation.tags}/>
-            <div className="creation-github-link">
-                <a href={this.props.creation.githubLink}>
-                    <img src="http://icons-for-free.com/free-icons/png/512/1220319.png"/>
-                </a>
-            </div>
+            <a href={this.props.creation.githubLink}
+               className="creation-github-link">
+                <img src={gitHubIcon}/>
+            </a>
         </div>;
     }
 }

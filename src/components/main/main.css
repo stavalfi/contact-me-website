@@ -1,12 +1,10 @@
-.page-container {
-    display: flex;
-    justify-content: center;
+body{
     background-color: #f7f9fb;
-    min-height: 100vh;
 }
-
-.page-content {
-    width: 60vw;
+.page-container {
+    margin: 0 auto;
+    min-height: 100vh;
+    width: 63rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

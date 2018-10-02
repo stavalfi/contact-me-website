@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: "Avenir Next";
+    font-family: "Avenir Next Ariel";
 }
 
 a {
@@ -9,7 +9,10 @@ a {
 }
 
 .my-image {
-    /*background-image: url("https://scontent.ftlv1-1.fna.fbcdn.net/v/t1.0-9/20476297_10212598889181528_356426753430549447_n.jpg?_nc_cat=101&oh=f332ca9371778b63580e92b490901c41&oe=5C190A3D");*/
+    background-image: url("../../assets/images/welcome/welcome-image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     height: 100vh;
     display: flex;
     justify-content: center;
