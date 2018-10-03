@@ -38,7 +38,10 @@ jobs:
       - run: npm run build
       - run: cd ~ && git clone --depth 1 -b master https://github.com/stavalfi/stavalfi.github.io.git
       - run: cd ~/stavalfi.github.io && find -maxdepth 1 ! -name .gitignore ! -name .git ! -name . -exec rm -rv {} \;
+      - run: cd ~/stavalfi.github.io && ls
       - run: cp -a ~/repo/dist/. ~/stavalfi.github.io/
+      - run: cd ~/repo/dist/ && ls
+      - run: cd ~/stavalfi.github.io && ls
       - run: git config --global user.email "stavalfi@gmail.com"
       - run: git config --global user.name "stavalfi"
       - run: cd ~/stavalfi.github.io && git add --all && git commit -m "circle-ci - updating content" && git push -q https://${GITHUB_PERSONAL_TOKEN}@github.com/stavalfi/stavalfi.github.io.git master
