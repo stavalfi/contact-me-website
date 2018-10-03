@@ -41,5 +41,5 @@ jobs:
       - run: cp -a ~/repo/dist/. ~/stavalfi.github.io/
       - run: git config --global user.email "stavalfi@gmail.com"
       - run: git config --global user.name "stavalfi"
-      - run: cd ~/stavalfi.github.io && git add --all && git commit -m "circle-ci - updating content" && git push origin master
+      - run: cd ~/stavalfi.github.io && git add --all && git commit -m "circle-ci - updating content" && git push -q https://${GITHUB_PERSONAL_TOKEN}@github.com/stavalfi/stavalfi.github.io.git master
 
