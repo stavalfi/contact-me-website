@@ -1,8 +1,6 @@
 import "./experience.css";
 import {jobs} from "../../data/jobs";
-
-
-const React = require("react");
+import React from "react";
 
 export default class Experience extends React.Component {
     constructor(props) {

@@ -5,6 +5,7 @@ const mapIf = (predicate, mapper) => (element, index) => {
 };
 
 const not = predicate => (element, index) => !predicate(element, index);
+
 const indexEven = (element, index) => index % 2 === 0;
 
 export {mapIf, not, indexEven};

@@ -1,7 +1,6 @@
 import "./horizontal-tags.css";
 import Tag from "../tag/tag";
-
-const React = require("react");
+import React from "react";
 
 export default class HorizontalTags extends React.Component {
     constructor(props) {

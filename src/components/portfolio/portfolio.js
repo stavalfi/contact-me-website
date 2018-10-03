@@ -1,8 +1,7 @@
 import "./portfolio.css";
 import Creation from "../creation/creation";
 import {creations} from "../../data/creations";
-
-const React = require("react");
+import React from "react";
 
 export default class Portfolio extends React.Component {
 
