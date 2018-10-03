@@ -31,7 +31,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: npm test
 
-      - publish-prod:
+      - deploy-prod:
             steps:
               - run: npm run build
               - run: cd ~ && git clone --depth 1 -b master https://github.com/stavalfi/stavalfi.github.io.git
