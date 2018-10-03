@@ -18,7 +18,7 @@ const isDevelopmentMode = process.env.NODE_ENV === 'development';
 // process.traceDeprecation = true
 
 module.exports = smp.wrap({
-    devtool: "source-map",
+    // devtool: "source-map",
     // in production mode, the webpack does uglify and Scope Hoisting which means that all the modules are under
     // the same scope and not in different scopes. it's slow down the build but makes the code run faster.
     mode: isDevelopmentMode ? "development" : "production",
@@ -121,10 +121,10 @@ module.exports = smp.wrap({
         // define plugins for specific modes
     ].concat(
         isDevelopmentMode ? [
-            // new Jarvis({
-            //     port: 1337 // optional: set a port
-            //   }),
-            // new BundleAnalyzerPlugin()
+            new Jarvis({
+                port: 1337 // optional: set a port
+              }),
+            new BundleAnalyzerPlugin()
         ] : []
     ),
     // the dev server doesn't save any files in FS. he use in-memory FS because it is faster. so I won't find any actual bundled files in my actual FS.
