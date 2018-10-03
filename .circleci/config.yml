@@ -1,39 +1,55 @@
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
 version: 2
 jobs:
   build:
     docker:
-      # specify the version you desire here
       - image: circleci/node:7.10
-      
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
-
-    working_directory: ~/repo
-
     steps:
       - checkout
-
       # Download and cache dependencies
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
-
       - run: npm install
-
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-        
-      # run tests!
+          key: v1-dependencies-{{ checksum "package.json" }}   
+  test:
+    docker:
+      - image: circleci/node:7.10
+    steps:
+      - checkout
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+      - run: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}   
+      - run: npm test
+
+  deploy:
+    docker:
+      - image: circleci/node:7.10
+    steps:
+      - checkout
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+      - run: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}   
       - run: npm test
       - run: npm run build
       - run: cd ~ && git clone --depth 1 -b master https://github.com/stavalfi/stavalfi.github.io.git
@@ -43,3 +59,14 @@ jobs:
       - run: git config --global user.name "stavalfi"
       - run: cd ~/stavalfi.github.io && git add --all && git commit -m "circle-ci - updating content" && git push -q https://${GITHUB_PERSONAL_TOKEN}@github.com/stavalfi/stavalfi.github.io.git master
 
+workflows:
+  version: 2
+  build-test-and-deploy:
+    jobs:
+      - test
+      - deploy:
+          filters:
+            branches:
+              only: master
+          requires:
+            - test
