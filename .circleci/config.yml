@@ -37,7 +37,7 @@ jobs:
       - run: npm test
       - run: npm build
       - run: cd ~
-      - run: git clone --depth 1 -b master git@github.com:stavalfi/stavalfi.github.io.git
+      - run: git clone --depth 1 -b master https://github.com/stavalfi/stavalfi.github.io.git
       - run: cd stavalfi.github.io
       - run: find -maxdepth 1 ! -name .gitignore ! -name .git ! -name . -exec rm -rv {} \;
       - run: cd ..
