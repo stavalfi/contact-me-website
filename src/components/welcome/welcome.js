@@ -1,9 +1,11 @@
 import "./welcome.css";
 import Main from "../main/main";
-
-const React = require("react");
+import React from "react";
 
 export default class Welcome extends React.Component {
+    constructor(props) {
+        super(props);
+    }
 
     render() {
         return <div>
@@ -13,7 +15,7 @@ export default class Welcome extends React.Component {
                         Hey, my name is
                     </div>
                     <div className='my-name'>
-                        --- Stav Alfi ---
+                        Stav Alfi
                     </div>
                 </div>
             </div>

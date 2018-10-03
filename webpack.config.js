@@ -39,7 +39,7 @@ module.exports = smp.wrap({
     module: {
         rules: [
             {
-                test: /\.(jpg|jpeg)$/,
+                test: /\.(jpg|jpeg|svg)$/,
                 use: {
                     // will accept imports of the above files (usually images) and if they are equal/less then the option-limit I specified, then those files
                     // will transform to strings and will be added to the JS bundle. If they are bigger then this loader will invoke file-loader (if no fall-back is defined) which will

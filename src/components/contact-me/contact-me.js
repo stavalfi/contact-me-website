@@ -1,8 +1,7 @@
 import "./contact-me.css";
 import {additionalLinks} from "../../data/additionalLinks";
-
-
-const React = require("react");
+import personalImage from "../../assets/images/contact-me/personal-image.jpg"
+import React from "react";
 
 export default class ContactMe extends React.Component {
     constructor(props) {
@@ -12,12 +11,11 @@ export default class ContactMe extends React.Component {
         this.moreInfoSentence = "If you're interested in working with me, please get in touch using" +
             " one of the methods below. Or feel free to just say hi. I like that too.";
         this.myEmail = "stavalfi@gmail.com";
-        this.personalImageAddress = "https://idanktv.com/wp-content/uploads/2015/06/pojo-placeholder-1.png";
     }
 
     render() {
         return <div className="contact-me-container">
-            <img src={this.personalImageAddress} className="personal-image"/>
+            <img src={personalImage} className="personal-image"/>
             <div className="more-information">
                 <div className="ending-sentence">
                     {this.moreInfoSentence}

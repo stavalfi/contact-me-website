@@ -1,6 +1,5 @@
 import "./tag.css";
-
-const React = require("react");
+import React from "react";
 
 export default class Tag extends React.Component {
     constructor(props) {

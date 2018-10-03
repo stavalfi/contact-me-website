@@ -1,7 +1,6 @@
 import "./paper.css";
 import HorizontalTags from "../horizontal-tags/horizontal-tags";
-
-const React = require("react");
+import React from "react";
 
 export default class Paper extends React.Component {
 
