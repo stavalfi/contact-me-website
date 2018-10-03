@@ -7,7 +7,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-serve",
     "build": "cross-env NODE_ENV=deployment webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\""
   },
   "keywords": [],
   "author": "",
