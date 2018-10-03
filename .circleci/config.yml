@@ -37,7 +37,7 @@ jobs:
       - run: npm test
       - run: npm run build
       - run: cd ~ && git clone --depth 1 -b master https://github.com/stavalfi/stavalfi.github.io.git
-      - run: cd stavalfi.github.io && find -maxdepth 1 ! -name .gitignore ! -name .git ! -name . -exec rm -rv {} \;
+      - run: cd ~/stavalfi.github.io && find -maxdepth 1 ! -name .gitignore ! -name .git ! -name . -exec rm -rv {} \;
       - run: cp -a ~/repo/dist/. ~/stavalfi.github.io/
       - run: cd ~/stavalfi.github.io && git add --all && git commit -m "circle-ci - updating content" && git push
 
