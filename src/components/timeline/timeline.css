@@ -127,14 +127,10 @@
     top: 16px;
     left: 50%;
     margin-left: -25px;
-    border: 1px solid;
-    border-color: #8a8a8a;
+    border: 1px solid #8a8a8a;
     background-color: #f7f9fb;
     z-index: 100;
-    border-top-right-radius: 50%;
-    border-top-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-    border-bottom-left-radius: 50%;
+    border-radius: 50%;
 }
 
 .timeline > li.timeline-inverted > .timeline-panel {
