@@ -33,7 +33,7 @@ module.exports = smp.wrap({
         // ....................................................................
         // [name] == the name of the chunk
         // [chunkhash] == a hash code that is generated from the content (without metadata of webpack) of the chunk.
-        filename: isDevelopmentMode? "[hash].bundle.js":"[contenthash].bundle.js",
+        filename: isDevelopmentMode ? "[hash].bundle.js" : "[contenthash].bundle.js",
         path: path.join(__dirname, "dist")
     },
     module: {
@@ -84,6 +84,16 @@ module.exports = smp.wrap({
                         babelrc: true
                     }
                 }
+            },
+            {
+                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'fonts/'
+                    }
+                }]
             }
         ]
     },
@@ -91,7 +101,7 @@ module.exports = smp.wrap({
         // generate a html file after every time webpack end
         new HtmlWebpackPlugin({
             title: "Stav Alfi - Frontend Engineer",
-            template: path.join(__dirname, 'src','output-index-tamplate.html')
+            template: path.join(__dirname, 'src', 'output-index-tamplate.html')
         }),
         // put all the css files in one css file and not in the js files because js files can take time until they load so mean while the css are not loaded.
         // in this way, the browser can manage the process by him self because css and js are in different files.
@@ -123,7 +133,7 @@ module.exports = smp.wrap({
         isDevelopmentMode ? [
             new Jarvis({
                 port: 1337 // optional: set a port
-              }),
+            }),
             new BundleAnalyzerPlugin()
         ] : []
     ),

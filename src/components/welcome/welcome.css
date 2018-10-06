@@ -1,6 +1,15 @@
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Raleway'), local('Raleway-Regular'),
+    url('../../assets/fonts/raleway/raleway-v12-latin-regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */ url('../../assets/fonts/raleway/raleway-v12-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */ url('../../assets/fonts/raleway/raleway-v12-latin-regular.woff') format('woff'), /* Modern Browsers */ url('../../assets/fonts/raleway/raleway-v12-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */ url('../../assets/fonts/raleway/raleway-v12-latin-regular.svg#Raleway') format('svg'); /* Legacy iOS */
+}
+
 * {
     margin: 0;
-    font-family: "Avenir Next Ariel", serif;
+    font-family: Raleway;
     box-sizing: border-box;
 }
 
@@ -10,10 +19,8 @@ a {
 }
 
 .my-image {
-    background-image: url("../../assets/images/welcome/welcome-image.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+    background: url("../../assets/images/welcome/welcome-image.jpg") no-repeat center center;
     height: 100vh;
     display: flex;
     justify-content: center;

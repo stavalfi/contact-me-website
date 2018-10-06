@@ -1,6 +1,6 @@
 .contact-me-container {
     display: flex;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
     /*border-style: solid;*/
 }
 .personal-image {
@@ -59,8 +59,7 @@
     .contact-me-container {
         display: flex;
         flex-direction: column;
-        margin-top: 2rem;
-        width: 400px;
+        width: 330px;
     }
 
     .personal-image {
