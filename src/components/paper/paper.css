@@ -1,7 +1,8 @@
 .paper {
     display: flex;
     flex-direction: column;
-    /*padding: 1rem;*/
+    padding: 5px;
+    border: 1px solid transparent;
 }
 
 .paper-title {
@@ -11,4 +12,8 @@
 
 .paper-summary {
     font-size: 1.2rem;
+}
+
+.paper:hover {
+    border: 1px solid silver;
 }
