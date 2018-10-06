@@ -1,6 +1,5 @@
 import "./timeline.css";
 import React from "react";
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 const jobs = [
     {
@@ -36,15 +35,9 @@ export default class Timeline extends React.Component {
     render() {
         return <div className="timeline-container">
             <div className="container">
-                {/*<div className="page-header">*/}
-                {/*<h1 id="timeline">Timeline</h1>*/}
-                {/*</div>*/}
                 <ul className="timeline">
                     <li className="timeline-date left">
-                        <div className="timeline-badge">
-                            {/*<FontAwesomeIcon icon="stroopwafel"/>*/}
-                            <i className="glyphicon glyphicon-check"></i>
-                        </div>
+                        <div className="timeline-badge"/>
                         <div className="timeline-panel">
                             <div className="timeline-heading">
                                 <h2>Now</h2>
@@ -58,7 +51,6 @@ export default class Timeline extends React.Component {
                                     NICE - Software Engineering Student
                                 </h4>
                                 <div className="text-muted">
-                                    <i className="glyphicon glyphicon-time"></i>
                                     Israel
                                 </div>
                                 <br/>
@@ -69,9 +61,7 @@ export default class Timeline extends React.Component {
                         </div>
                     </li>
                     <li className="timeline-date timeline-inverted  right">
-                        <div className="timeline-badge">
-                            <i className="glyphicon glyphicon-check"></i>
-                        </div>
+                        <div className="timeline-badge"/>
                         <div className="timeline-panel">
                             <div className="timeline-heading">
                                 <h2>2018</h2>
@@ -83,7 +73,6 @@ export default class Timeline extends React.Component {
                             <div className="timeline-heading">
                                 <h3 className="timeline-title">Graduated from Ariel University</h3>
                                 <div className="text-muted">
-                                    <i className="glyphicon glyphicon-time"></i>
                                     Israel
                                 </div>
                             </div>
@@ -96,9 +85,7 @@ export default class Timeline extends React.Component {
                         </div>
                     </li>
                     <li className="timeline-date left">
-                        <div className="timeline-badge">
-                            <i className="glyphicon glyphicon-check"></i>
-                        </div>
+                        <div className="timeline-badge"/>
                         <div className="timeline-panel">
                             <div className="timeline-heading">
                                 <h2>2017</h2>
@@ -112,7 +99,6 @@ export default class Timeline extends React.Component {
                                     Started working at NICE - Software Engineering Student
                                 </h4>
                                 <div className="text-muted">
-                                    <i className="glyphicon glyphicon-time"></i>
                                     Israel
                                 </div>
                                 <br/>
@@ -120,9 +106,7 @@ export default class Timeline extends React.Component {
                         </div>
                     </li>
                     <li className="timeline-inverted timeline-date right">
-                        <div className="timeline-badge">
-                            <i className="glyphicon glyphicon-check"></i>
-                        </div>
+                        <div className="timeline-badge"/>
                         <div className="timeline-panel">
                             <div className="timeline-heading">
                                 <h2>2015</h2>
@@ -134,7 +118,6 @@ export default class Timeline extends React.Component {
                             <div className="timeline-heading">
                                 <h3 className="timeline-title">Started Degree in Ariel University</h3>
                                 <div className="text-muted">
-                                    <i className="glyphicon glyphicon-time"></i>
                                     Israel
                                 </div>
                             </div>

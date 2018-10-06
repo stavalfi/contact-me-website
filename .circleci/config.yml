@@ -16,7 +16,8 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}   
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run: npm run build
   test:
     docker:
       - image: circleci/node:7.10
@@ -35,6 +36,7 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}   
       - run: npm test
+      - run: npm run build
 
   deploy:
     docker:
@@ -53,7 +55,6 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}   
-      - run: npm test
       - run: npm run build
       - run: cd ~ && git clone --depth 1 -b master https://github.com/stavalfi/stavalfi.github.io.git
       - run: cd ~/stavalfi.github.io && find -maxdepth 1 ! -name .gitignore ! -name .git ! -name . -exec rm -rv {} \;
