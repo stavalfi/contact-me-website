@@ -1,41 +1,15 @@
-body{
+body {
     background-color: #f7f9fb;
 }
+
 .page-container {
-    margin: 0 auto;
+    margin: 2rem auto 0;
+    padding: 0 1rem;
     min-height: 100vh;
-    width: 63rem;
+    max-width: 63rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-}
-
-.website-title {
-    margin-top: 2rem;
-    font-size: 4em;
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-.menu {
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.menu > span {
-    text-transform: uppercase;
-}
-
-.menu > span:hover {
-    color: #a5b1c2;
-}
-
-.content {
-    height: 100%;
 }
 
 .website-header {
@@ -44,4 +18,23 @@ body{
     font-family: "freight-sans-pro", serif;
     color: #454545;
     margin: 2rem auto;
+}
+
+.lined-title {
+    margin: 2rem auto;
+    text-transform: uppercase;
+    width: 50%;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    line-height: 0.1em;
+}
+
+.lined-title span {
+    background: #f7f9fb;
+    padding: 0 10px;
+}
+
+.page-separator{
+    margin-top: 4rem;
+    margin-bottom: 4rem
 }

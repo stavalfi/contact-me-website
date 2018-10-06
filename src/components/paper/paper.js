@@ -1,5 +1,4 @@
 import "./paper.css";
-import HorizontalTags from "../horizontal-tags/horizontal-tags";
 import React from "react";
 
 export default class Paper extends React.Component {
@@ -18,9 +17,6 @@ export default class Paper extends React.Component {
                     {this.props.paper.summary}
                 </p>
             </a>
-            <div className="horizontal-tags">
-                <HorizontalTags tagsAlign="flex-start" tags={this.props.paper.tags}/>
-            </div>
         </div>;
     }
 }

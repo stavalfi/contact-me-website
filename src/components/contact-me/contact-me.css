@@ -1,14 +1,14 @@
 .contact-me-container {
     display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-    padding: 1rem;
+    margin: 0 auto;
+    /*border-style: solid;*/
+}
+.personal-image {
+    /*align-self: center;*/
 }
 
-.personal-image {
-    align-self: center;
-    height: 75%;
-    width: 50%;
+.personal-image, .more-information {
+    height: 281px;
 }
 
 .more-information {
@@ -16,8 +16,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-radius: 0 2rem 2rem 0;
-    border: 1px solid;
 }
 
 .ending-sentence {
@@ -37,4 +35,46 @@
 .additional-links-icon {
     width: 6vmin;
     height: 6vmin;
+}
+
+@media only screen and (min-width: 961px) {
+    .contact-me-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .personal-image, .more-information {
+        width: 50%;
+    }
+
+    .more-information{
+        border-radius: 0 2rem 2rem 0;
+        border-right: 1px solid;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .contact-me-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        width: 400px;
+    }
+
+    .personal-image {
+        order: 2;
+    }
+
+    .more-information {
+        order: 1;
+    }
+
+    .more-information{
+        border-radius: 2rem 2rem 0 0;
+        border-right: 1px solid;
+        border-top: 1px solid;
+        border-left: 1px solid;
+    }
 }

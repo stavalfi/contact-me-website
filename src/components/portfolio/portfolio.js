@@ -1,7 +1,9 @@
 import "./portfolio.css";
-import Creation from "../creation/creation";
 import {creations} from "../../data/creations";
+import gitHubIcon from '../../assets/icons/github-icon.png'
 import React from "react";
+
+const myGitHubRepositoriesAddress = 'https://github.com/stavalfi?tab=repositories';
 
 export default class Portfolio extends React.Component {
 
@@ -12,18 +14,20 @@ export default class Portfolio extends React.Component {
 
     render() {
         return <div className="portfolio-grid">
-            <div className="portfolio-column">
-                <div className="left-column top-left-corner">
-                    <Creation creation={this.state.creations.bittorrent}/>
-                </div>
-                <div className="background-height image2"/>
-            </div>
-            <div className="portfolio-column">
-                <div className="background-height image1"/>
-                <div className="right-column bottom-right-corner">
-                    <Creation creation={this.state.creations.webpackStarter}/>
-                </div>
-            </div>
+            {
+                this.state.creations.map((creation, index) =>
+                    <div key={index} className="creation" style={{
+                        backgroundImage: "url(" + creation.imageAddress + ")"
+                    }}>
+                        <span>{creation.title}</span>
+                    </div>)
+            }
+            <span className="more-portfolio">
+                <span>Want to see more?</span>
+                <a href={myGitHubRepositoriesAddress} className='more-portfolio-icon'>
+                    <img src={gitHubIcon}/>
+                </a>
+            </span>
         </div>;
     }
 }
