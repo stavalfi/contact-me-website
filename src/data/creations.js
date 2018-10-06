@@ -1,5 +1,6 @@
 import torrentXImage from '../assets/images/portfolio/torrentx-image.png'
 import webpackImage from '../assets/images/portfolio/webpack-image.png'
+import stavWebSiteImage from '../assets/images/portfolio/stav-website-image.png'
 
 const creations = [
     {
@@ -34,7 +35,7 @@ const creations = [
     },
     {
         title: "Stav Website",
-        imageAddress: webpackImage,
+        imageAddress: stavWebSiteImage,
         summary: "This website",
         githubLink: "https://github.com/stavalfi/contact-me-website",
         tags: [
