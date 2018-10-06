@@ -16,11 +16,11 @@ export default class Portfolio extends React.Component {
         return <div className="portfolio-grid">
             {
                 this.state.creations.map((creation, index) =>
-                    <div key={index} className="creation" style={{
+                    <a href={creation.githubLink} key={index} className="creation" style={{
                         backgroundImage: "url(" + creation.imageAddress + ")"
                     }}>
                         <span>{creation.title}</span>
-                    </div>)
+                    </a>)
             }
             <span className="more-portfolio">
                 <span>Want to see more?</span>
