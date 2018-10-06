@@ -3,7 +3,10 @@ import {mapIf, not, indexEven} from "../../utls/conditionalOperators";
 import {papers} from "../../data/papers";
 import Paper from "../paper/paper";
 
-const React = require("react");
+import gitHubIcon from '../../assets/icons/github-icon.png'
+import React from "react";
+
+const myGitHubRepositoriesAddress = 'https://github.com/stavalfi/lectures';
 
 export default class Papers extends React.Component {
 
@@ -15,16 +18,22 @@ export default class Papers extends React.Component {
     render() {
         return <div className="papers-container">
             {
-                this.state.papers.map((element, index) => <Paper key={index} paper={element}/>)
-                    .map(mapIf(indexEven, (paper, index) =>
-                        <div key={index} className="paper-container paper-container-right paper-right-border-circle">
-                            {paper}
-                        </div>))
-                    .map(mapIf(not(indexEven), (paper, index) =>
-                        <div key={index} className="paper-container paper-left-border-circle">
-                            {paper}
-                        </div>))
+                this.state.papers.map((paper, index) =>
+                    <div key={index}>
+                        <Paper paper={paper}/>
+                        {
+                            index < this.state.papers.length - 1 ?
+                                <div className="lined-title"/>
+                                : <div/>
+                        }
+                    </div>)
             }
+            <span className="more-papers">
+                <span>Want to see more?</span>
+                <a href={myGitHubRepositoriesAddress} className='more-papers-icon'>
+                    <img src={gitHubIcon}/>
+                </a>
+            </span>
         </div>;
     }
 }

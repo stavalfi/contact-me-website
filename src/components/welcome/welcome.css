@@ -1,6 +1,7 @@
-body {
+* {
     margin: 0;
-    font-family: "Avenir Next Ariel";
+    font-family: "Avenir Next Ariel", serif;
+    box-sizing: border-box;
 }
 
 a {

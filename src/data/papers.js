@@ -63,16 +63,6 @@ const papers = [
         ],
         isBook: false,
         githubLink: "https://github.com/stavalfi/lectures/blob/master/Introduction%20To%20Docker.md",
-    },
-    {
-        title: "C++ lvalue, rvalue And Between",
-        summary: "This tutorial attempts to clarify the common mistakes about the multiple invalid definitions for lvalue and rvalue expressions",
-        tags: [
-            "C++",
-            "C++ 2011"
-        ],
-        isBook: false,
-        githubLink: "https://github.com/stavalfi/lectures/blob/master/Cpp%20lvalue%20rvalue%20and%20between.md",
     }
 ];
 export {papers};

@@ -40,8 +40,8 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
+    "npm": "^6.4.1",
     "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "react-textfit": "^1.1.0"
+    "react-dom": "^16.4.2"
   }
 }
