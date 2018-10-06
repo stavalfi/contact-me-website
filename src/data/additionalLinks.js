@@ -1,5 +1,5 @@
 import gitHubIcon from '../assets/icons/github-icon.png'
-import linkedinIcon from '../assets/icons/linkedin-icon.svg'
+import linkedinIcon from '../assets/icons/linkedin-icon.png'
 import StackOverFlowIcon from '../assets/icons/stackoverflow-icon.png'
 
 const additionalLinks = [

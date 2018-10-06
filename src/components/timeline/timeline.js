@@ -55,9 +55,15 @@ export default class Timeline extends React.Component {
                                 </div>
                                 <br/>
                             </div>
-                            <div className="timeline-body">
-                                Writing websites using Javascript: Angular 6, Webpack, Typescript, ESLint
-                            </div>
+                            <ul className="timeline-body">
+                                <li>
+                                    Writing websites using Javascript: Angular 6, Webpack, Typescript, ESLint.
+                                </li>
+                                <li>
+                                    Writing micro services using Spring technologies: Dependency Injection, MVC, Cloud,
+                                    Cloud Stream.
+                                </li>
+                            </ul>
                         </div>
                     </li>
                     <li className="timeline-date timeline-inverted  right">
@@ -101,7 +107,6 @@ export default class Timeline extends React.Component {
                                 <div className="text-muted">
                                     Israel
                                 </div>
-                                <br/>
                             </div>
                         </div>
                     </li>
